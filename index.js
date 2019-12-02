@@ -10,11 +10,9 @@ const options = yargs
     type: 'string',
     demandOption: false
   })
-  .option('s', { alias: 'search', describe: 'search term', type: 'string' })
-  .argv
+  .option('s', { alias: 'search', describe: 'search term', type: 'string' }).argv
 
 if (options.name) console.log(`hello, ${options.name}!`)
-
 
 if (options.search) {
   console.log(`Searching for jokes about ${options.search}...`)

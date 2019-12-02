@@ -1,6 +1,14 @@
-// @ts-nocheck
+#!/usr/bin/env node
+
 const yargs = require('yargs')
 const axios = require('axios')
+const figlet = require('figlet')
+const chalk = require('chalk')
+const clear = require('clear')
+
+clear()
+console.log(chalk.red(figlet.textSync('hello-cli', { horizontalLayout: 'full' })))
+console.log('\n')
 
 const options = yargs
   .usage('Usage: -n <name>')

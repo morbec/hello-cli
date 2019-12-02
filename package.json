@@ -4,13 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "macos": "pkg . --targets macos",
+    "all": "pkg ."
   },
+  "bin": "index.js",
   "keywords": [],
   "author": "Fabio Morbec <morbec@me.com> (https://github.com/morbec)",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.0",
+    "chalk": "^3.0.0",
+    "clear": "^0.1.0",
+    "figlet": "^1.2.4",
     "yargs": "^15.0.2"
+  },
+  "pkg": {
+    "assets": "node_modules/figlet/fonts/Standard.flf"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.0"
   }
 }
